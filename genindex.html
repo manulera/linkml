@@ -250,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="howtos/port-linkml.html">Porting LinkML tools to other programming languages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/multidimensional-arrays.html">Multidimensional Arrays</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howtos/generate-ai-prompts.html">How to Generate AI prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howtos/deprecating-elements.html">Deprecating elements while maintaining PURLs and other URIs</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples of use</a></li>
@@ -479,6 +480,13 @@
 </li>
         </ul></li>
         <li>
+    --exclude-annotations
+
+        <ul>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">gen-shacl command line option</a>
+</li>
+        </ul></li>
+        <li>
     --exclude-attributes
 
         <ul>
@@ -666,6 +674,13 @@
 </li>
         </ul></li>
         <li>
+    --include-annotations
+
+        <ul>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">gen-shacl command line option</a>
+</li>
+        </ul></li>
+        <li>
     --include-context
 
         <ul>
@@ -693,6 +708,13 @@
           <li><a href="generators/json-schema.html#cmdoption-gen-json-schema-include-range-class-descendants">gen-json-schema command line option</a>
 </li>
           <li><a href="data/validating-data.html#cmdoption-linkml-validate-include-range-class-descendants">linkml-validate command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --include-upstream
+
+        <ul>
+          <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-include-upstream">gen-erdiagram command line option</a>
 </li>
         </ul></li>
         <li>
@@ -888,6 +910,13 @@
           <li><a href="generators/terminusdb.html#cmdoption-gen-terminusdb-mergeimports">gen-terminusdb command line option</a>
 </li>
           <li><a href="generators/typescript.html#cmdoption-gen-typescript-mergeimports">gen-typescript command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --meta
+
+        <ul>
+          <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-meta">gen-pydantic command line option</a>
 </li>
         </ul></li>
         <li>
@@ -1487,13 +1516,6 @@
 
         <ul>
           <li><a href="generators/sqlalchemy.html#cmdoption-gen-sqla-pydantic">gen-sqla command line option</a>
-</li>
-        </ul></li>
-        <li>
-    --pydantic-version
-
-        <ul>
-          <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-pydantic-version">gen-pydantic command line option</a>
 </li>
         </ul></li>
         <li>
@@ -2462,12 +2484,18 @@
 </li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticClass.bases">bases (linkml.generators.pydanticgen.template.PydanticClass attribute)</a>
 </li>
-        <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.black">black (linkml.generators.pydanticgen.PydanticGenerator attribute)</a>
+        <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SchemaDefinition.bindings">bindings (linkml_runtime.linkml_model.meta.SchemaDefinition attribute)</a>
+
+        <ul>
+          <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SlotDefinition.bindings">(linkml_runtime.linkml_model.meta.SlotDefinition attribute)</a>
 </li>
-        <li><a href="code/utils.html#linkml.utils.execute_tutorial.Block">Block (class in linkml.utils.execute_tutorial)</a>
+        </ul></li>
+        <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.PydanticGenerator.black">black (linkml.generators.pydanticgen.PydanticGenerator attribute)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="code/utils.html#linkml.utils.execute_tutorial.Block">Block (class in linkml.utils.execute_tutorial)</a>
+</li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.array.ArrayRangeGenerator.bounded_dimensions">bounded_dimensions() (linkml.generators.pydanticgen.array.ArrayRangeGenerator method)</a>
 
         <ul>
@@ -3107,6 +3135,8 @@
           <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-f">--format</a>
 </li>
           <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-im">--importmap</a>
+</li>
+          <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-include-upstream">--include-upstream</a>
 </li>
           <li><a href="generators/erdiagram.html#cmdoption-gen-erdiagram-log_level">--log_level</a>
 </li>
@@ -3760,6 +3790,8 @@
 </li>
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-mergeimports">--mergeimports</a>
 </li>
+          <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-meta">--meta</a>
+</li>
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-metadata">--metadata</a>
 </li>
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-useuris">--metauris</a>
@@ -3769,8 +3801,6 @@
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-metadata">--no-metadata</a>
 </li>
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-stacktrace">--no-stacktrace</a>
-</li>
-          <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-pydantic-version">--pydantic-version</a>
 </li>
           <li><a href="generators/pydantic.html#cmdoption-gen-pydantic-stacktrace">--stacktrace</a>
 </li>
@@ -3860,9 +3890,13 @@
         <ul>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-closed">--closed</a>
 </li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">--exclude-annotations</a>
+</li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-f">--format</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-im">--importmap</a>
+</li>
+          <li><a href="generators/shacl.html#cmdoption-gen-shacl-include-annotations">--include-annotations</a>
 </li>
           <li><a href="generators/shacl.html#cmdoption-gen-shacl-log_level">--log_level</a>
 </li>
@@ -4364,8 +4398,6 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.array.ArrayRangeGenerator.has_bounded_dimensions">has_bounded_dimensions (linkml.generators.pydanticgen.array.ArrayRangeGenerator property)</a>
 </li>
-        <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ArrayExpression.has_extra_dimensions">has_extra_dimensions (linkml_runtime.linkml_model.meta.ArrayExpression attribute)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SlotDefinition.has_member">has_member (linkml_runtime.linkml_model.meta.SlotDefinition attribute)</a>
@@ -4425,8 +4457,6 @@
         <ul>
           <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.Imports.imports">(linkml.generators.pydanticgen.template.Imports attribute)</a>
 </li>
-          <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticModule.imports">(linkml.generators.pydanticgen.template.PydanticModule attribute)</a>
-</li>
           <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SchemaDefinition.imports">(linkml_runtime.linkml_model.meta.SchemaDefinition attribute)</a>
 </li>
         </ul></li>
@@ -4470,10 +4500,10 @@
 </li>
         <li><a href="code/utils.html#linkml.utils.datautils.infer_index_slot">infer_index_slot() (in module linkml.utils.datautils)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="code/utils.html#linkml.utils.datautils.infer_root_class">infer_root_class() (in module linkml.utils.datautils)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="developers/inference.html#linkml_runtime.utils.inference_utils.infer_slot_value">infer_slot_value() (in module linkml_runtime.utils.inference_utils)</a>
 </li>
         <li><a href="generators/docgen.html#linkml.generators.docgen.DocGenerator.inheritance_tree">inheritance_tree() (linkml.generators.docgen.DocGenerator method)</a>
@@ -5533,12 +5563,6 @@
 </li>
         <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.EnumDefinition.pv_formula">pv_formula (linkml_runtime.linkml_model.meta.EnumDefinition attribute)</a>
 </li>
-        <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.array.ArrayRangeGenerator.pydantic_ver">pydantic_ver (linkml.generators.pydanticgen.array.ArrayRangeGenerator attribute)</a>
-
-        <ul>
-          <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.TemplateModel.pydantic_ver">(linkml.generators.pydanticgen.template.TemplateModel attribute)</a>
-</li>
-        </ul></li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticAttribute">PydanticAttribute (class in linkml.generators.pydanticgen.template)</a>
 </li>
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticBaseModel">PydanticBaseModel (class in linkml.generators.pydanticgen.template)</a>
@@ -5556,6 +5580,8 @@
         <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticValidator">PydanticValidator (class in linkml.generators.pydanticgen.template)</a>
 </li>
         <li><a href="generators/docgen.html#linkml.generators.docgen.MarkdownDialect.python">python (linkml.generators.docgen.MarkdownDialect attribute)</a>
+</li>
+        <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticModule.python_imports">python_imports (linkml.generators.pydanticgen.template.PydanticModule attribute)</a>
 </li>
         <li><a href="generators/python.html#linkml.generators.pythongen.PythonGenerator">PythonGenerator (class in linkml.generators.pythongen)</a>
 </li>
@@ -5787,10 +5813,10 @@
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_leaves">slot_leaves() (linkml_runtime.utils.schemaview.SchemaView method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="code/utils.html#linkml.utils.generator.Generator.slot_name">slot_name() (linkml.utils.generator.Generator method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="code/utils.html#linkml.utils.schemaloader.SchemaLoader.slot_name_for">slot_name_for() (linkml.utils.schemaloader.SchemaLoader static method)</a>
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.slot_name_mappings">slot_name_mappings() (linkml_runtime.utils.schemaview.SchemaView method)</a>
@@ -5825,9 +5851,11 @@
           <li><a href="code/utils.html#linkml.utils.typereferences.References.slotrefs">(linkml.utils.typereferences.References attribute)</a>
 </li>
         </ul></li>
-        <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ClassDefinition.slots">slots (linkml_runtime.linkml_model.meta.ClassDefinition attribute)</a>
+        <li><a href="generators/pydantic.html#linkml.generators.pydanticgen.template.PydanticClass.slots">slots (linkml.generators.pydanticgen.template.PydanticClass property)</a>
 
         <ul>
+          <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.ClassDefinition.slots">(linkml_runtime.linkml_model.meta.ClassDefinition attribute)</a>
+</li>
           <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SchemaDefinition.slots">(linkml_runtime.linkml_model.meta.SchemaDefinition attribute)</a>
 </li>
         </ul></li>
@@ -5992,6 +6020,8 @@
         <li><a href="code/validator.html#linkml.validator.loaders.TsvLoader">TsvLoader (class in linkml.validator.loaders)</a>
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.type_ancestors">type_ancestors() (linkml_runtime.utils.schemaview.SchemaView method)</a>
+</li>
+        <li><a href="code/metamodel.html#linkml_runtime.linkml_model.meta.SlotDefinition.type_mappings">type_mappings (linkml_runtime.linkml_model.meta.SlotDefinition attribute)</a>
 </li>
         <li><a href="developers/schemaview.html#linkml_runtime.utils.schemaview.SchemaView.type_parents">type_parents() (linkml_runtime.utils.schemaview.SchemaView method)</a>
 </li>
